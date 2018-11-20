@@ -1,0 +1,34 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- Header -->
+<header th:fragment="menu">
+    <div class="container">
+        <div class="row">
+            <div class="header-wrap clearfix">
+                <div class="col-md-2">
+                    <div id="logo" class="logo mgl2">
+                        <a href="/" rel="首页">
+                            <img src="/images/logo.png" alt="image">
+                        </a>
+                    </div><!-- /.logo -->
+                    <div class="btn-menu">
+                        <span></span>
+                    </div><!-- //mobile menu button -->
+                </div>
+                <div class="col-md-10">
+                    <div class="nav-wrap">
+                        <nav id="mainnav" class="mainnav">
+                            <ul class="menu">
+                                <li><a href="/" th:text="#{menu.home}"></a></li>
+                                <li><a href="/pdfmerge.html" th:text="#{menu.pdf.merge}"></a></li>
+                                <li><a href="/pdfsplit/index.html" th:text="#{menu.pdf.split}"></a></li>
+                                <li><a target="_blank" href="http://www.enilu.cn" th:text="#{menu.about}"></a></li>
+
+                            </ul><!-- /.menu -->
+                        </nav><!-- /.mainnav -->
+                    </div><!-- /.nav-wrap -->
+                </div>
+            </div><!-- /.header-inner -->
+        </div><!-- /.row -->
+    </div>
+</header><!-- /.header -->
+</html>

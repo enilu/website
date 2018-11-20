@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="js">
+    <!-- Javascript -->
+    <script type="text/javascript" src="/javascript/jquery.min.js"></script>
+    <!--&lt;!&ndash;<script type="text/javascript" src="/javascript/bootstrap.min.js"></script>&ndash;&gt;Z-->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/javascript/imagesloaded.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71886989-11"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-71886989-11');
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?ec30af30c0b1dc5fbcc8e55468e91fc5";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</div>
+</html>

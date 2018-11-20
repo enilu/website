@@ -1,0 +1,101 @@
+.post-content p{
+    font-size: 14px;
+    word-wrap: break-word;
+    word-break: break-word;
+    margin: 10px 0;
+    vertical-align: baseline;
+    font-size:15px;
+}
+.p-right img{
+    width: 40%;
+    float: right;
+    padding-left: 20px;
+}
+.p-right-50 img{
+    width: 50%;
+    float: right;
+    padding-left: 20px;
+}
+.p-right-10 img{
+    width: 10%;
+    float: right;
+    padding-left: 20px;
+}
+.p-right-30 img{
+    width: 30%;
+    float: right;
+    padding-left: 20px;
+}
+.p-right-60 img{
+    width: 60%;
+    float: right;
+    padding-left: 20px;
+}
+.p-right-70 img{
+    width: 70%;
+    float: right;
+    padding-left: 20px;
+}
+.p-left img{
+    width: 40%;
+    float: left;
+    padding-right: 20px;
+}
+.p-left-10 img{
+    width: 10%;
+    float: left;
+    padding-right: 20px;
+}
+.p-left-20 img{
+    width: 20%;
+    float: left;
+    padding-right: 20px;
+}
+.p-left-30 img{
+    width: 30%;
+    float: left;
+    padding-right: 20px;
+}
+.p-left-50 img{
+    width: 50%;
+    float: left;
+    padding-right: 20px;
+}
+.p-left-60 img{
+    width: 60%;
+    float: left;
+    padding-right: 20px;
+}
+.p-left-70 img{
+    width: 70%;
+    float: left;
+    padding-right: 20px;
+}
+
+.p-center{
+    text-align: center;
+}
+.p-100 img{
+    width:100%;
+}
+.p-90 img{
+    width:90%;
+}
+.p-80 img{
+    width:80%;
+}
+.p-70 img{
+    width:70%;
+}
+.p-60 img{
+    width:60%;
+}
+.p-50 img{
+    width:50%;
+}
+.p-40 img{
+    width:40%;
+}
+.p-30 img{
+    width:30%;
+}

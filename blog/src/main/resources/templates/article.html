@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/head::head(${article.title}+'-'+${article.author},${article.tag}+','+${article.category},'精选IT精选好博客文章，杜绝网络垃圾')"></head>
+
+<style>
+    img{
+        width:70%;
+        text-align: center;
+    }
+</style>
+<div class="boxed">
+    <!-- Header -->
+    <header id="header" class="header header-classic clearfix" th:include="common/menu::menu"></header>
+    <section class="container main">
+        <div class="row">
+            <div class="col-md-8" id="news-list-all">
+                <div class="row news-list">
+                    <div class="col-md-12">
+                        <div class="article">
+                            <div class="title">
+                                <h3 th:text="${article.title}">
+                                </h3><br>
+                                <small th:text="${author.author}"></small>&nbsp;&nbsp;
+                                <small th:text="${#dates.format(article?.publishDate, 'yyyy-MM-dd')}"
+                                       class="publish-date"></small>
+
+
+                            </div>
+                            <p id="content" th:utext="${article.content}"></p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row news-list">
+                    <div class="col-md-12">
+                        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#"
+                                                                                                          class="bds_weixin"
+                                                                                                          data-cmd="weixin"
+                                                                                                          title="分享到微信"></a><a
+                                href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#"
+                                                                                                   class="bds_tsina"
+                                                                                                   data-cmd="tsina"
+                                                                                                   title="分享到新浪微博"></a><a
+                                href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#"
+                                                                                               class="bds_renren"
+                                                                                               data-cmd="renren"
+                                                                                               title="分享到人人网"></a></div>
+                        <script>window._bd_share_config = {
+                            "common": {
+                                "bdSnsKey": {},
+                                "bdText": "",
+                                "bdMini": "2",
+                                "bdMiniList": false,
+                                "bdPic": "",
+                                "bdStyle": "0",
+                                "bdSize": "16"
+                            },
+                            "share": {},
+                            "image": {
+                                "viewList": ["weixin", "qzone", "tsina", "tqq", "renren"],
+                                "viewText": "分享到：",
+                                "viewSize": "16"
+                            },
+                            "selectShare": {
+                                "bdContainerClass": null,
+                                "bdSelectMiniList": ["weixin", "qzone", "tsina", "tqq", "renren"]
+                            }
+                        };
+                        with (document)
+                            0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src =
+                                '/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 " style="text-align: center;">
+                <img th:src="'https://open.weixin.qq.com/qr/code?username='+${author.source}+''" width="200">
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer class="footer" th:include="common/footer::footer"></footer>
+
+</div>
+<div th:include="common/common_js::js"></div>
+
+<script th:inline="javascript">
+    $(function () {
+        $('.article > p > img').each(function () {
+            var img = $(this);
+            if (img.attr('data-src') != '') {
+                img.attr('width', '50%');
+                img.attr('src', img.attr('data-src'));
+            }
+        });
+    });
+</script>
+
+</html>

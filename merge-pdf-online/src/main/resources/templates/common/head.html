@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title,keywords,description)">
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8"/>
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title th:text="${title}"></title>
+
+    <meta name="author" content="enilu"/>
+    <meta name="keywords" th:content="${keywords}"/>
+    <meta name="description" th:content="${description}"/>
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <!-- Bootstrap  -->
+    <!--<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css" />-->
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+
+
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/responsive.css"/>
+
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/animate.css"/>
+    <link href="/plugins/font-awesome/4.7.0/css/font-awesome.min.css" media="all"
+          rel="stylesheet" type="text/css"/>
+    <link href="/icon/favicon.ico" rel="shortcut icon"/>
+    <style>
+        footer{
+            padding: 0px 0px 0px;
+        }
+        .vertical-center{
+            display:flex;display:-webkit-flex;align-items: center;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="/javascript/html5shiv.js"></script>
+    <script src="/javascript/respond.min.js"></script>
+    <![endif]-->
+</head>
+</html>

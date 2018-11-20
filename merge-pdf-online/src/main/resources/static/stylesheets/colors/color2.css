@@ -1,0 +1,190 @@
+/**
+  * Color
+  * Border Color
+  * Background Color  
+*/
+
+/* Color
+-------------------------------------------------------------- */
+a:hover, a:focus,
+.flat-information > li > a:hover,
+.flat-language .current > a:hover,
+.social-links a:hover,
+#mainnav > ul > li > a:hover,
+#mainnav > ul > li.active > a,
+#mainnav ul.submenu > li > a:hover,
+.menu.menu-extra li a:hover,
+.footer .logo-footer a:hover,
+.footer .flat-information > li:before,
+.footer .widget.widget-recent-new .text h6 a:hover,
+.breadcrumbs ul li a:hover,
+.breadcrumbs ul li,
+.post.style2.column .content-post h2.title-post a:hover,
+.post.style2.column .content-post .readmore,
+.flat-counter .icon-count i,
+.iconbox .box-header .box-icon i,
+.testimonials .position,
+.post.style2 .content-post h5.title-post a:hover,
+.post.style2 .content-post ul.meta-post li a:hover,
+.header-widgets .widgets-header-information .info-icon i,
+.header.headerv2 #mainnav > ul > li > a:hover,
+.header.headerv2 .menu.menu-extra li a:hover,
+.header.headerv2 .social-links li a:hover,
+.header.headerv2 #mainnav > ul > li.active > a,
+.avatar .gallery-link li span i,
+.top-header .wrap-top-header .social-links a:hover,
+.top-header .wrap-top-header .flat-language .current > a:hover,
+.price-table:hover .price-header  .price-number,
+.header.headerv3 .wrap-style5 .social-links li a:hover,
+.portfolio-item .portfolio-wrap .portfolio-info .portfolio-link li a:hover i,
+.bottom .copyright a:hover,
+.go-top:hover i,
+section.business-financial .btn-click a:hover,
+.nav-wrap .top-search #searchform-all #searchsubmit,
+.iconbox.compact:hover .box-icon i,
+.flat-imagebox .flat-imagebox-button a:hover,
+.widget-testimonials .testimonials.style6 .name,
+.services-detail .post .content-post h2.title-post a:hover,
+.company .entry-excerpt .title a:hover,
+.our-team .title-section .sub-title a,
+.portfolio-filter li.active a, .portfolio-filter li a:hover,
+.blog-pagination .flat-pagination li a:hover, .blog-pagination .flat-pagination li.active a, .blog-pagination .flat-pagination li.next:hover:after,
+.widget.widget-recent-new ul li a:hover,
+.widget.widget-categories ul li a:hover,
+.widget.widget-twiter p, .widget.widget-twiter a,
+.post.style3 .content-post ul.meta-post li a,
+.post.style3 .content-post .readmore,
+.content-post h2.title-post a:hover, .post .content-post ul.meta-post li a:hover, .post .content-post .social-links li a:hover, .comment-list .comment-metadata .comment-info h5 a:hover,
+.post blockquote a,
+.comment-list .comment-metadata .comment-info span,
+.post .content-post ul.talk-about li::before,
+.widget.widget-categories.style2 ul li a:hover, .widget.widget-categories.style2 ul li.active a,
+.widget.widget-categories.style2 ul li a:hover ~ span, .widget.widget-categories.style2 ul li.active span,
+.price-box ins,
+.section-icon-info .iconbox.style2 .box-header i,
+.widget-product .product-shop .product-name a:hover,
+.widget-amazing button.flat-btn.shop-submit,
+.detail-product .overlay a,
+.widget-shopby .price_slider_amount .price_label input,
+.product-detail .product-info .product_meta ul li a,
+.product-detail .product-info ul.list-info li::before,
+.tab-comment .comment-list .comment-metadata .comment-info h5 a:hover,
+.your-order .list-order li span.color-blue,
+.check-out .customer p a,
+.completed .payment h4 span,
+.content-partners h4 a:hover {
+	color: #e28020;
+}
+
+/* Background Color
+-------------------------------------------------------------- */
+button, input[type="button"], input[type="reset"], input[type="submit"],
+.go-top,
+.flat-language > ul > li > ul,
+.post.style2 .featured-post,
+.post.style2.column .content-post .readmore::before,
+section.business-financial,
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span,
+.informaiton-text .btn-click a,
+.flat-accordion .toggle-title.active::before,
+.testimonials.style3:hover .message,
+.testimonials.style3.active .message,
+.iconbox.compact .box-header .box-icon,
+.flat-team .avatar .overlay,
+.avatar .gallery-content .gallery-link li a:hover span,
+.flat-btn.bg-black:hover,
+.iconbox .overlay,
+.portfolio-item .portfolio-wrap .portfolio-info .portfolio-link li span,
+.portfolio-style .owl-theme .owl-controls .owl-nav div,
+.flat-imagebox .flat-imagebox-button a,
+.widget.widget-nav-menu ul li.active,
+.widget.widget-nav-menu ul li:hover,
+.video-icon.fa-play,
+.iconbox.style2:hover .box-icon,
+.widget-download .download a:hover,
+.flat-tabs ul.menu-tab li.active,
+.wrap-comming-soon .social-links li:hover,
+.widget.widget-categories ul li::before,
+.widget.widget-tags .tags-list a:hover,
+.post .content-post .flat-link a:hover, .comment-list .comment-metadata .comment-reply a:hover,
+.widget-shopby .ui-slider .ui-slider-handle span.shadow.dow,
+.widget-shopby .ui-slider .ui-slider-range,
+.widget-amazing .flat-amazing,
+.detail-product .overlay a:hover,
+.btn-menu:before, .btn-menu:after, .btn-menu span {
+	background-color: #e28020;
+}
+
+.detail-product .overlay {
+	background: rgba(226,128,32,0.8);
+}
+
+.tp-caption.flat-button-slider.bg-blue,
+.tp-caption.flat-button-slider:hover {
+	background-color: #e28020!important;
+}
+
+.iconbox.compact:hover .box-icon,
+.flat-imagebox .flat-imagebox-button a:hover {
+	background-color: #fff;
+}
+
+
+/* Border Color
+-------------------------------------------------------------- */
+.blog-carosuel.owl-theme .owl-dots .owl-dot.active span::before,
+#flat-testimonials-carousel ul li:first-child img,
+.flex-direction-nav a,
+.owl-theme .owl-dots .owl-dot span,
+.style-dots.owl-theme .owl-dots .owl-dot.active span,
+.style-dots.owl-theme .owl-dots .owl-dot:hover span,
+.iconbox .box-header .box-icon,
+.style-dots2.owl-theme .owl-dots .owl-dot.active span,
+.style-dots2.owl-theme .owl-dots .owl-dot:hover span,
+.iconbox.style1,
+.nav-wrap .top-search #searchform-all #s:focus,
+.flat-contact-form select.select-field:focus,
+.widget-testimonials .owl-theme .owl-dots .owl-dot.active span,
+.widget-testimonials .owl-theme .owl-dots .owl-dot:hover span,
+.widget.widget-tags .tags-list a:hover,
+.comment-list .comment-metadata .comment-reply a,
+.post .content-post .flat-link a:hover,
+.comment-list .comment-metadata .comment-reply a:hover {
+	border-color: #e28020;
+}
+
+.testimonials.style3:hover .message::after,
+.testimonials.style3.active .message::after {
+	border-top: 10px solid #e28020;
+}
+
+.flat-comming {
+	border-bottom: 2px solid #e28020;
+}
+
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+	border-bottom: 1px solid #e28020;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus {
+	border-color: #e28020;
+}
+
+
+
+

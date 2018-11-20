@@ -1,0 +1,106 @@
+﻿.row{
+	padding: 10px;
+}
+/* 菜单 */
+
+.container{
+	color:white;padding-top:10px;
+}
+.navbar{
+	min-height: 80px;
+}
+.navbar-brand{
+	font-size:20px;
+}
+.navbar-default .navbar-nav>li>a{
+	font-size:16px;
+}
+.navbar-nav{
+	padding-left:80px;
+}
+
+/* 主页 */
+
+.main {
+	padding: 0px;
+}
+
+.news-list {
+	padding: 6px;
+}
+
+.article {
+	color: rgba(14, 52, 76, 0.84);
+}
+
+.article > .title {
+	font-size: 17px;
+
+}
+
+.article > .title > a {
+	color: rgba(4, 4, 5, 0.84);
+	font-weight:bold;
+}
+
+.title-author{
+	font-size:15px;color:lightgray;
+}
+.article > .summary {
+	padding-top: 10px;
+	font-size: 15px;
+    line-height: 28px;
+}
+
+
+.author > .title {
+	color:black;
+	font-size: 18px;
+}
+
+.author-list > div > a {
+	min-width: 160px;
+	min-height: 100px;
+	margin: 5px 0px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.publish-date {
+ 	font-size: 15px;
+	color: lightgray;
+	text-align: right;
+	padding-right: 50px;
+	margin-top:-10px;
+}
+
+.tag-list > div > a {
+	min-width: 120px;
+	min-height: 60px;
+	margin: 5px 0px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+footer{
+	padding: 0px 00px;
+}
+
+
+
+/**标签云页面*/
+.news-tag{
+	font-size:18px;
+}
+
+#load-more{
+	display: inline-block;
+	height: 60px;
+	width: 100%;
+	line-height: 60px;
+	border: 1px solid #f0f0f0;
+	margin-bottom: 60px;
+	color: #bbb;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+}

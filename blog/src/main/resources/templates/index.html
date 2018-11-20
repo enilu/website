@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/head::head(${title}+'|IT博客精选','博客,博客精选,blog精选,IT博客,IT博客精选',${title}+',  精选IT精选好博客文章，杜绝网络垃圾')"></head>
+
+
+<div class="boxed">
+    <!-- Header -->
+    <header id="header" class="header header-classic clearfix" th:include="common/menu::menu"></header>
+    <input id="pageNum" type="hidden" th:value="${pageNum}"/>
+    <input id="author" type="hidden" th:if="${author} != null" th:value="${author}"/>
+
+    <section class="container main">
+        <div class="row">
+            <div class="col-md-8">
+                <h3 style="color:black;padding-left:10px;padding-bottom:10px;" th:if="${author} != null"
+                    th:text="${author}+'文章列表'">
+                </h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div id="news-list-all">
+                    <div class="row news-list" th:each="news,newsStat : ${list}">
+                        <div class="col-md-12">
+                            <div class="article">
+                                <div class="title">
+                                    <a th:if="${news.content} == null" th:text="${news.title}" th:href="${news.url}"
+                                       target="_blank"></a>
+                                    <a th:if="${news.content} != null" th:text="${news.title}"
+                                       th:href="'/article/'+${news.id}" target="_blank"></a>
+                                    &nbsp;&nbsp;<span th:text="${news.author}" class="title-author"></span>
+                                </div>
+                                <div class="summary">
+                                    <p th:text="${news.summ}"></p>
+
+                                    <p th:text="${#dates.format(news?.publishDate, 'yyyy-MM-dd')}"
+                                       class="publish-date"></p>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p id="load-more"  onclick="loadMore();">
+                        加载更多
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 " th:if=" ${collector!= null}">
+
+                <img th:src="'https://open.weixin.qq.com/qr/code?username='+${collector.source}+''" width="200">
+
+            </div>
+            <div class="col-md-4 " th:if="${author} == null">
+                <div class="row author">
+                    <div class="col-md-12">
+                        <h4 style="color:black;margin-top:0px;">精选作者</h4>
+                    </div>
+                    <div class="row author-list">
+
+                        <div class="col-md-6 col-xs-6" th:each="author,authorStat : ${authors}">
+                            <a class="btn btn-default" th:href="'/author/'+${author.author}" role="button"
+                               target="_blank" th:text="${author.author}">
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer class="footer" th:include="common/footer::footer"></footer>
+
+</div>
+<div th:include="common/common_js::js"></div>
+
+<script th:inline="javascript">
+    var currentCategory = /*[[${currentCategory}]]*/;
+</script>
+<script type="text/javascript" src="/javascript/blog.js"/>
+
+</html>

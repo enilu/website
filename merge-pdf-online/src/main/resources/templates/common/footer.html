@@ -1,0 +1,80 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!-- Footer -->
+<div th:fragment="footer" style="background-color: rgb(6, 110, 134);">
+    <footer class="footer"style="background-color: rgb(6, 110, 134);">
+        <div class="container">
+            <div class="row">
+                <!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget widget-out-link">
+                        <h4 class="widget-title" th:text="#{footer.contactUs}"> </h4>
+                        <ul class="one-half whitet">
+                            <li th:text="#{footer.sendmail}"></li>
+                            <li><a href="mailto:zhangtao54@gmail.com">zhangtao54@gmail.com</a></li>
+                            <li><a href="http://www.enilu.cn" target="_blank" th:text="#{menu.about}"></a></li>
+                        </ul>
+                    </div>
+                </div><!-- /.col-md-3 -->
+
+                <!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget widget-out-link">
+                        <h4 class="widget-title" th:text="#{footer.friendly.link}"> </h4>
+                        <ul class="one-half">
+                            <li><a target="_blank" href="https://blogsel.me/" th:text="#{footer.friendly.link.blog}"> </a></li>
+                            <li><a target="_blank" href="http://www.enilu.cn/guns-lite/" th:text="#{footer.friendly.link.guns-lite}"> </a></li>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div><!-- /.col-md-3 -->
+
+
+                <!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget widget-out-link">
+                        <h4 class="widget-title" th:text="#{footer.wechat}"></h4>
+                        <ul class="one-half whitet">
+
+                            <li><img src="/images/code.jpg" style="width:40%;">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget widget-out-link">
+                        <h4 class="widget-title" th:text="#{footer.admire}"></h4>
+                        <ul class="one-half whitet">
+
+                            <li><img src="/images/zanshang.jpg" style="width:40%;">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </footer>
+
+    <!-- Bottom -->
+    <div class="bottom" style="background-color: rgb(6, 110, 134);">
+        <div class="container">
+            <div class="copyright">
+                <p>© 2018 Powered by <a target="_blank"href="http://www.enilu.cn">enilu</a>
+                </p>
+
+            </div>
+        </div><!-- /.container -->
+    </div><!-- bottom -->
+
+    <!-- Go Top -->
+    <a class="go-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+
+</div><!-- Boxed -->
+
+
+
+</html>

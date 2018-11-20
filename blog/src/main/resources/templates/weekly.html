@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head
+        th:include="common/head::head('一周精选第'+${date}+'期|IT博客精选','博客,博客精选,blog精选,IT博客,IT博客精选,一周精选','精选IT精选好博客文章，杜绝网络垃圾')"></head>
+
+
+<div class="boxed">
+    <!-- Header -->
+    <header id="header" class="header header-classic clearfix" th:include="common/menu::menu"></header>
+
+
+    <section class="container main">
+        <div class="row">
+            <div class="col-md-8">
+                <h3 style="color:black;padding-left:10px;padding-bottom:10px;"
+                    th:text="'一周精选第'+${date}+'期'">
+                </h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+                <div id="news-list-all">
+                    <div class="row news-list" th:each="news,newsStat : ${articles}">
+                        <div class="col-md-12">
+                            <div class="article">
+                                <div class="title">
+                                    <a th:if="${news.content} == null" th:text="${news.title}" th:href="${news.url}"
+                                       target="_blank"></a>
+                                    <a th:if="${news.content} != null" th:text="${news.title}"
+                                       th:href="'/article/'+${news.id}" target="_blank"></a>
+                                    &nbsp;&nbsp;<span th:text="${news.author}" class="title-author"></span>
+
+                                </div>
+                                <div class="summary">
+                                    <div class="row">
+                                        <div class="col-md-8">
+
+                                            <p th:text="${news.summ}"></p>
+
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img  th:if="${news.collector.className} == 'mpCollect'"
+                                                  th:src="'https://open.weixin.qq.com/qr/code?username='+${news.collector.source}+''" width="120">
+
+                                        </div>
+                                    </div>
+
+
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <footer class="footer" th:include="common/footer::footer"></footer>
+
+</div>
+<div th:include="common/common_js::js"></div>
+
+
+
+</html>

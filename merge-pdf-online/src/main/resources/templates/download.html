@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xml:lang="en-US" lang="en-US"><!--<![endif]-->
+<head th:include="common/head::head('pdf merge online','pdf merge,pdf,pdf merge online,pdf合并,pdf在线合并','pdf merge online pdf在线合并')"></head>
+<style>
+
+</style>
+<body class="header-sticky" style="overflow:-Scroll;overflow-x:hidden">
+<div class="boxed" style="margin-bottom:-26px;">
+
+    <header id="header" class="header header-classic clearfix"  th:include="common/menu::menu"></header>
+
+
+
+    <section style="min-height:400px;" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="margin-top:50px;">
+                    <p id="loading"  style="text-align: center;" th:text="#{loading.txt}"></p>
+                    <p id="finished" style="display: none; text-align: center;">
+                        <span th:text="#{over.txt}"></span>
+                        <a th:href="'/download?fileName='+${fileName}+'&downloadName=merge.pdf'" th:text="#{download.txt}"></a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer" th:include="common/footer::footer"></footer>
+</div>
+<div th:include="common/common_js::js"></div>
+
+<script th:inline="javascript">
+    var fileName = /*[[${fileName}]]*/;
+
+    var isFinished = false;
+    $(document).ready(function () {
+        setInterval("getMergeResult()", 2000);
+
+    });
+    function getMergeResult(){
+        if(isFinished){
+           return ;
+        }
+        $.ajax({ url: "/getMergeInfo",data:{fileName:fileName} , success: function(data){
+                console.log(data);
+                if(data.code=='0000'){
+                    isFinished = true;
+                    $('#loading').hide();
+                    $('#finished').show();
+                }
+            }});
+    }
+</script>
+</body>
+</html>
+
+
+
+​

@@ -1,0 +1,54 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title,keywords,description)">
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8"/>
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title th:text="${title}"></title>
+    <meta name="baidu-site-verification" th:content="'2iEQyXxpqc'" />
+    <meta name="author" content="enilu"/>
+    <meta name="keywords" th:content="${keywords}"/>
+    <meta name="description" th:content="${description}"/>
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/blog.css"/>
+
+    <style>
+
+    </style>
+    <!--[if lt IE 9]>
+    <script src="/javascript/html5shiv.js"></script>
+    <script src="/javascript/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?a8197558ad9b8a76e3b074d958ad98e9";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script>
+        (function(){
+        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?dc92f65ba4824f88163ed4c6c2ee93e7":"https://jspassport.ssl.qhimg.com/11.0.1.js?dc92f65ba4824f88163ed4c6c2ee93e7";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+    })();
+    </script>
+
+</head>
+</html>

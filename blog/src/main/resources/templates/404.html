@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/head::head('404|IT博客精选','博客,博客精选,blog精选,IT博客,IT博客精选',${title}+',  精选IT精选好博客文章，杜绝网络垃圾')"></head>
+
+
+<div class="boxed">
+    <!-- Header -->
+    <header id="header" class="header header-classic clearfix" th:include="common/menu::menu"></header>
+
+    <section>
+        <p style="text-align: center">页面飞走了,正在跳转到首页...
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </p>
+
+    </section>
+    <footer class="footer" th:include="common/footer::footer"></footer>
+
+</div>
+<div th:include="common/common_js::js"></div>
+
+<script>
+    setTimeout(toIndex,2000);
+    function toIndex(){
+        window.location.href="/";
+    }
+</script>
+</html>

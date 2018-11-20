@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--
+    Name: free_form
+    User: Yao
+    Date: 2018/2/2
+    TIMETime: 18:53
+    -->
+<head>
+    <meta charset="UTF-8">
+    <title>信数官网-我的业务场景</title>
+</head>
+<body>
+<h1 data-breakpage>我的业务场景</h1>
+<table>
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>联系电话</th>
+        <th>公司名称</th>
+        <th>行业类别</th>
+        <th>业务场景</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--/*@thymesVar id="content" type="com.xinshucredit.website.entity.ContactInputContent"*/-->
+    <tr th:object="${content}">
+        <td th:text="*{name}"></td>
+        <td th:text="*{phone}"></td>
+        <td th:text="*{company}"></td>
+        <td th:text="*{industry}"></td>
+        <td th:text="*{scenario}"></td>
+    </tr>
+    </tbody>
+</table>
+<p></p>
+
+</body>
+</html>

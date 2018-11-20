@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xml:lang="en-US" lang="en-US"><!--<![endif]-->
+<head th:include="common/head::head('splt pdf online','split pdf,pdf,split pdf online,pdf分割,pdf在线分割','split pdf online pdf在线分割')"></head>
+
+<body class="header-sticky" style="overflow:-Scroll;overflow-x:hidden">
+<div class="boxed" style="margin-bottom:-26px;">
+
+    <header id="header" class="header header-classic clearfix"  th:include="common/menu::menu"></header>
+
+
+
+    <section style="min-height:400px;" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="margin-top:50px;">
+
+                    <p id="finished" style="  text-align: center;"
+                       th:each="file,fileStat : ${files}">
+
+                        <a target="_blank" th:href="'/download?fileName='+${file}+'&downloadName='+${file}" th:text="${file}"></a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer" th:include="common/footer::footer"></footer>
+</div>
+<div th:include="common/common_js::js"></div>
+
+</body>
+</html>
+
+
+
+​
