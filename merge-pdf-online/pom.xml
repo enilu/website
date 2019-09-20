@@ -8,7 +8,7 @@
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <artifactId>merge-pdf-online</artifactId>
     <dependencies>
         <dependency>
@@ -33,31 +33,38 @@
             <scope>test</scope>
         </dependency>
 
+
+
     </dependencies>
 
     <build>
         <plugins>
+            <!--以jar包形式单独部署-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <mainClass>cn.enilu.website.mergepdf.WebsiteBootApplication</mainClass>
+                    <layout>ZIP</layout>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
-            <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.6</version>
-                <configuration>
-                    <warName>ROOT</warName>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
+
+            <!--部署在tomcat中-->
+            <!--<plugin>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-war-plugin</artifactId>-->
+            <!--<configuration>-->
+            <!--<warName>pdfmerge</warName>-->
+            <!--<failOnMissingWebXml>false</failOnMissingWebXml>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 

@@ -50,7 +50,7 @@ public class PdfMergeController extends BaseController
     }
 
     /**
-     * 上传pdf文件(上传到项目的webapp/static/img)
+     * 上传pdf文件
      */
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
@@ -105,6 +105,7 @@ public class PdfMergeController extends BaseController
 
 
         model.addAttribute("fileName", fileName);
+        model.addAttribute("fileCount",files.length);
         return "download";
     }
 

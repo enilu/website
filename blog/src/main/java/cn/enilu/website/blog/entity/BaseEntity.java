@@ -1,4 +1,4 @@
-package cn.enilu.website.bean;
+package cn.enilu.website.blog.entity;
 
 import lombok.Getter;
 import lombok.Setter;

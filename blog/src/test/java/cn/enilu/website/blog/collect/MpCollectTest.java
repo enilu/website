@@ -74,8 +74,8 @@ public class MpCollectTest extends BaseApplicationStartTest {
 //        做设计的面条
         //你丫才美工
         //做设计的面条
-        Collector collector = collectorRepository.findOneByAuthor("你丫才美工");
-        mpCollect.setCollect(collector);
+//        Collector collector = collectorRepository.findOneByAuthor("你丫才美工");
+//        mpCollect.setCollect(collector);
         mpCollect.collectAll();
     }
 

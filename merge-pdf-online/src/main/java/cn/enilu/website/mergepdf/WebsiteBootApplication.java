@@ -37,6 +37,6 @@ public class WebsiteBootApplication extends SpringBootServletInitializer {
 
     @EventListener(ApplicationReadyEvent.class)
     public void doSomethingAfterStartup() {
-        log.info("application in http://localhost:8081 when in dev profile");
+        log.info("application in http://localhost:port");
     }
 }

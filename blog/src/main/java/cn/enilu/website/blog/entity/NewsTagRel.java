@@ -1,6 +1,5 @@
 package cn.enilu.website.blog.entity;
 
-import cn.enilu.website.bean.BaseEntity;
 import lombok.Data;
 
 import javax.persistence.Entity;

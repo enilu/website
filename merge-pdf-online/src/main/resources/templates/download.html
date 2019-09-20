@@ -20,10 +20,25 @@
             <div class="row">
                 <div class="col-md-12" style="margin-top:50px;">
                     <p id="loading"  style="text-align: center;" th:text="#{loading.txt}"></p>
-                    <p id="finished" style="display: none; text-align: center;">
+                    <div id="finished" style="display: none; text-align: center;font-size:20px;">
+                        <p>
                         <span th:text="#{over.txt}"></span>
                         <a th:href="'/download?fileName='+${fileName}+'&downloadName=merge.pdf'" th:text="#{download.txt}"></a>
+                        </p>
+                        <p style="text-align: center;font-size:14px;" th:if="${ fileCount < 5}">
+                                <br>
+                            合并完毕了，如果好用的话，可以赞赏作者和一杯咖啡哦O(∩_∩)O<br>
+                            <img src="/images/donate.jpg" width="600" align="center">
+                        </p>
+                    </div>
+                    <p style="text-align: center"  th:if="${ fileCount > 4}">
+                        <br>
+                        你合并辣么多文件，不赞赏下良心不会痛么O(∩_∩)O<br>
+                        <img src="/images/donate.jpg" width="600" align="center">
                     </p>
+
+
+
                 </div>
             </div>
 
