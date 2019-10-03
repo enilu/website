@@ -28,6 +28,12 @@ import java.util.Set;
 public class MpCollect extends AbstractCollect {
     private Logger logger = LoggerFactory.getLogger(MpCollect.class);
     public static  final String WX_URL = "https://mp.weixin.qq.com";
+
+    @Override
+    public boolean isValid() {
+        return false;
+    }
+
     @Override
     public String getSource() {
         return collector.getSource();

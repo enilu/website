@@ -28,13 +28,16 @@ public class ScheduledCollect {
     CollectorRepository collectorRepository;
     @Autowired
     private ApplicationContext applicationContext;
-    @Scheduled(cron="0 10 03 * * ?")
+    @Scheduled(cron="0 48 21 * * ?")
     public void collect() {
         logger.info("现在时间：" + DateUtil.format(new Date()));
         List<Collector> collectors = collectorRepository.findAllByState(true);
         for(Collector collector :collectors){
             try {
                 AbstractCollect collect = (AbstractCollect) applicationContext.getBean(collector.getClassName());
+                if(!collect.isValid()){
+                    continue;
+                }
                 collect.setCollect(collector);
                 logger.info("采集:{}开始", collector.getAuthor());
                 collect.collect();

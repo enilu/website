@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="10 seconds" debug="false">
+	<!-- 应用名称 -->
+	<contextName>itblog.enilu.cn</contextName>
+
+	<!-- 向控制台输出日志 -->
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-M-d HH:mm:ss} [%thread] %p [%logger{0}]:%L %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+
+	<!-- 向文件输出日志 -->
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/blog/log/blog_%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>1000</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyyy-M-d HH:mm:ss} [%thread] %p [%logger{0}]:%L %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+
+	<!-- druid连接池的日志级别 -->
+	<logger name="com.alibaba.druid" level="INFO" />
+
+	<!-- snow_credit的日志级别 -->
+	<logger name="cn.enilu" level="DEBUG" />
+
+
+    <appender name="druidqueue" class="ch.qos.logback.classic.AsyncAppender">
+        <queueSize>512</queueSize>
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </appender>
+
+    <logger name="druid.sql.Statement" level="DEBUG" additivity="false">
+        <appender-ref ref="druidqueue"/>
+    </logger>
+
+	<!-- root级别的logger -->
+	<root level="INFO">
+		<appender-ref ref="file" />
+		<appender-ref ref="stdout" />
+	</root>
+</configuration>

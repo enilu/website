@@ -21,6 +21,15 @@ public abstract  class AbstractCollect {
     @Autowired
     protected NewsService newsService;
     protected Collector collector;
+
+    /**
+     * 采集器是否有效<br>
+     *     默认有效，如果无效，则需要重写该方法
+     * @return
+     */
+    public  boolean isValid(){
+        return true;
+    }
     public   void setCollect(Collector collector){
         this.collector = collector;
     }
