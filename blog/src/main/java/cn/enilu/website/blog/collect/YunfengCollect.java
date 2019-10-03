@@ -94,17 +94,17 @@ public class YunfengCollect extends AbstractCollect {
                 String publishDateStr = dateEl.text();
                 String title = element.select(".entry-header").first().text();
                 String url = element.select(".entry-content > .entry-body  > .entry-footer > .permalink").first().attr("href");
+                String key = Md5Util.getMD5String(url);
+                if (collectCache.exist(key)) {
+                    continue;
+                }
                 String content = getContent(url);
                 String summary = element.select(".entry-content > .entry-body > p").first().text();
                 if (StringUtil.isEmpty(content)) {
                     content = summary;
                 }
                 logger.info(title + publishDateStr);
-                String key = Md5Util.getMD5String(url);
 
-                if (collectCache.exist(key)) {
-                    continue;
-                }
                 Date publishDateEn = DateUtil.parse(publishDateStr, "MMM d, yyyy", Locale.ENGLISH);
                 Date publishDateCn = DateUtil.parse(DateUtil.formatDate(publishDateEn, "yyyy-MM-dd"), "yyyy-MM-dd");
                 News news = new News();

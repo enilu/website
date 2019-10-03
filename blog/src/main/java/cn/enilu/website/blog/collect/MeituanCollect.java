@@ -61,15 +61,15 @@ public class MeituanCollect extends AbstractCollect {
         }catch (Exception e){
             logger.error("collect page:{} error",PAGE_URL);
         }
-        Elements elements = document.select("article");
-        for(int i=0;i<elements.size();i++){
+        Elements elements = document.select(".post-title");
+        for(int i=0;i<(elements.size()>20?20:elements.size());i++){
             try{
             Element element = elements.get(i);
-            Element titleElement = element.select("header > a").first();
+            Element titleElement = element.select("a").first();
             String url = titleElement.attr("href");
+            String publishDateStr = url.substring(1,11);
             String title = titleElement.text();
-            String publishDateStr = element.select( ".post-meta-ctime").first().text();
-            String summary = element.select(".post-abstract").first().text();
+
             if(!url.startsWith("http")){
                 url  = HOME+url;
             }
@@ -78,8 +78,9 @@ public class MeituanCollect extends AbstractCollect {
                     continue;
                 }
                 try {
-
-                    Date publishDate = DateUtil.parse(publishDateStr, "yyyy-MM-dd");
+                    Document detailDoc =  Jsoup.connect(url).timeout(60000).get();
+                    String summary = detailDoc.select("meta[name=\"description\"]").first().attr("content");
+                    Date publishDate = DateUtil.parse(publishDateStr, "yyyy/MM/dd");
                     News news = new News();
                     news.setAuthor(getAuthor());
                     news.setSumm(summary);

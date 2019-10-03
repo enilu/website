@@ -62,6 +62,13 @@
                     </div>
                     <div class="row author-list">
 
+                        <div class="col-md-6 col-xs-6">
+                            <a class="btn btn-default" href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=alts44ap" role="button"
+                               target="_blank">
+                                2000云产品通用代金券<br>
+                            </a>
+                            <div style="font-size:12px;color:lightblue;margin-top: -29px;padding-right:5px;text-align: right;">广告</div>
+                        </div>
                         <div class="col-md-6 col-xs-6" th:each="author,authorStat : ${authors}">
                             <a class="btn btn-default" th:href="'/author/'+${author.author}" role="button"
                                target="_blank" th:text="${author.author}">
@@ -71,8 +78,19 @@
 
                     </div>
                 </div>
-
-
+            </div>
+            <div class="col-md-4 " th:if="${author} != null">
+                <div class="row author">
+                    <div class="row author-list">
+                        <div class="col-md-offset-3 col-md-6 col-xs-6">
+                            <a class="btn btn-default" href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=alts44ap" role="button"
+                               target="_blank">
+                                2000云产品通用代金券<br>
+                            </a>
+                            <div style="font-size:12px;color:lightblue;margin-top: -29px;padding-right:5px;text-align: right;">广告</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
