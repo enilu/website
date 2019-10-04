@@ -28,7 +28,7 @@ public class MeituanCollect extends AbstractCollect {
     public static  final String SOURCE = "meituan";
     public static  final String AUTHOR = "美团点评技术博客";
     public static  final String HOME = "https://tech.meituan.com";
-    public static  final String PAGE_URL = "https://tech.meituan.com/archives";
+    public static  final String PAGE_URL = "https://tech.meituan.com";
     @Override
     public String getSource() {
         return SOURCE;
@@ -67,7 +67,11 @@ public class MeituanCollect extends AbstractCollect {
             Element element = elements.get(i);
             Element titleElement = element.select("a").first();
             String url = titleElement.attr("href");
-            String publishDateStr = url.substring(1,11);
+                System.out.println(url);
+                System.out.println(url.length());
+                String publishDateStr = url;
+                publishDateStr = publishDateStr.replace("https://tech.meituan.com/","");
+                publishDateStr = publishDateStr.substring(0,10);
             String title = titleElement.text();
 
             if(!url.startsWith("http")){
@@ -79,7 +83,7 @@ public class MeituanCollect extends AbstractCollect {
                 }
                 try {
                     Document detailDoc =  Jsoup.connect(url).timeout(60000).get();
-                    String summary = detailDoc.select("meta[name=\"description\"]").first().attr("content");
+                    String summary = detailDoc.select("meta[property=\"og:description\"]").first().attr("content");
                     Date publishDate = DateUtil.parse(publishDateStr, "yyyy/MM/dd");
                     News news = new News();
                     news.setAuthor(getAuthor());
@@ -102,5 +106,14 @@ public class MeituanCollect extends AbstractCollect {
             }
 
         }
+    }
+
+    public static void main(String[] args) {
+        String url ="https://tech.meituan.com/2019/09/26/detailed-text-location.html";
+        String a = url;
+        a = a.replace("https://tech.meituan.com/","");
+        a = a.substring(0,10);
+        System.out.println(a);
+        System.out.println(url);
     }
 }

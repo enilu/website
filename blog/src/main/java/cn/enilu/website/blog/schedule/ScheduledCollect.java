@@ -28,7 +28,7 @@ public class ScheduledCollect {
     CollectorRepository collectorRepository;
     @Autowired
     private ApplicationContext applicationContext;
-    @Scheduled(cron="0 48 21 * * ?")
+    @Scheduled(cron="0 48 9 * * ?")
     public void collect() {
         logger.info("现在时间：" + DateUtil.format(new Date()));
         List<Collector> collectors = collectorRepository.findAllByState(true);
