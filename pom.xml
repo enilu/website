@@ -36,7 +36,7 @@
         <!-- Common libs -->
         <springframework.version>4.3.5.RELEASE</springframework.version>
         <nutz.version>1.r.59</nutz.version>
-        <jackson.version>2.7.7</jackson.version>
+        <jackson.version>2.12.6.1</jackson.version>
         <mail.version>1.5.4</mail.version>
 
         <httpcomponents.version>4.4.1</httpcomponents.version>
